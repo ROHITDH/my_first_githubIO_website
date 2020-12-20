@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html>
-  
-<head>
-<title>MY Echo</title>
-</head>
+<body>
 
-<body> 
-<button type="button" onclick="speech()">Click Me!</button>
+<h1>The button Element</h1>
 
-<script>
+<button type="button" onclick="speech">Click Me!</button>
+ 
+  <script>
             function speech() {
-                let msg =  "haiii";
+                let msg =  "hello";
                 var speech = new SpeechSynthesisUtterance();
                 speech.lang = "en-US";
 
@@ -21,6 +19,10 @@
                 window.speechSynthesis.speak(speech);
             }
 </script>
-</body>
   
-  </html>
+</body>
+</html>
+
+
+
+
