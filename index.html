@@ -2,13 +2,19 @@
 <html>
 <body>
 
-<h1>The button Element</h1>
+<h1>MY TEXT TO SPEECH</h1>
 
-<button type="button" onclick="speech">Click Me!</button>
+<form>
+  <label>Enter TEXT Here:</label>
+  <input type="text" id="myText" ><br><br>
+</form>
+ 
+<button type="button" onclick="speech()">Click Me!</button>
+ 
  
   <script>
             function speech() {
-                let msg =  "hello";
+                var x = document.getElementById("myText").value;
                 var speech = new SpeechSynthesisUtterance();
                 speech.lang = "en-US";
 
