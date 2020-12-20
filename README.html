@@ -1,2 +1,26 @@
-# my_first_githubIO_website
-just for learning purpose...creating one simple github IO website
+<!DOCTYPE html>
+<html>
+  
+<head>
+<title>MY Echo</title>
+</head>
+
+<body> 
+<button style="font-size:24px" onclick="speech()"    > <i class="fa fa-volume-up"></i></button>
+
+<script>
+            function speech() {
+                let msg =  "{{post.body|safe|linebreaks}}";
+                var speech = new SpeechSynthesisUtterance();
+                speech.lang = "en-US";
+
+                speech.text = msg;
+                speech.volume = 1;
+                speech.rate = 1;
+                speech.pitch = 1;
+                window.speechSynthesis.speak(speech);
+            }
+</script>
+</body>
+  
+  </html>
